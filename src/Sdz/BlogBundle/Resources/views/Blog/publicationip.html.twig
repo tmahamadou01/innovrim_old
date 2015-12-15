@@ -1,0 +1,29 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/publicationip.html.twig #}
+
+{# On utilise une variable temporaire, qu'on définit à false si elle n'est pas déjà définie #}
+
+{% set pageavenir = pageavenir|default(false) %}
+
+
+	{# Si on est sur la page d'accueil, on fait un lien vers la publication, sinon non #}
+	{% if pageavenir %}
+		<h3><a href="{{ path('sdz_blog_voirpubip', {'id': publicationip.id} ) }}">{{ publicationip.titre }}</a></h3>   
+		<time datetime="2012-11-09" class="date-1">{{ publicationip.date|date('d/m/Y') }}</time>
+		<div class="name-author">par <a href="#">{{ publicationip.auteur }}.</a></div>
+		<div class="clear"></div>
+		<p>
+			{{ publicationip.contenu }}
+		</p>	
+		<hr/>
+	{% else %}
+	
+		<h3><a href="{{ path('sdz_blog_voirpubip', {'id': publicationip.id} ) }}">{{ publicationip.titre }}</a></h3>   
+		<time datetime="2012-11-09" class="date-1">{{ publicationip.date|date('d/m/Y') }}</time>
+		<div class="name-author">par <a href="#">{{ publicationip.auteur }}.</a></div>
+		<div class="clear"></div>
+		<p>
+			{{ publicationip.contenu }}
+		</p>
+		<hr/>
+	{% endif %}
+

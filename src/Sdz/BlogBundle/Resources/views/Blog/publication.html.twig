@@ -1,0 +1,31 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/publication.html.twig #}
+
+{# On utilise une variable temporaire, qu'on définit à false si elle n'est pas déjà définie #}
+
+{% set pageactftic = pageactftic|default(false) %}
+
+	{# Si on est sur la page d'accueil, on fait un lien vers la publication, sinon non #}
+	{% if pageactftic %}
+		<h3><a href="{{ path('sdz_blog_voirpub', {'id': publication.id} ) }}">{{ publication.titre }}</a></h3>
+		<time datetime="2012-11-09" class="date-1">{{ publication.date|date('d/m/Y') }} </time>
+		<div class="name-author">par <a href="#">{{ publication.auteur }}.</a></div>
+		<div class="clear"></div>
+		<p>
+			{{ publication.contenu }}
+		</p>
+	{% else %}
+	<h3><a href="{{ path('sdz_blog_voirpub', {'id': publication.id} ) }}">{{ publication.titre }}</a></h3>
+		<time datetime="2012-11-09" class="date-1">{{ publication.date|date('d/m/Y') }} </time>
+		<div class="name-author">par <a href="#">{{ publication.auteur }}.</a></div>
+		<div class="clear"></div>
+		<p>
+			{{ publication.contenu }}
+		</p>
+		<hr/>
+	{% endif %}
+
+
+
+
+
+

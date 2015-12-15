@@ -1,0 +1,16 @@
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}Ajouter une image à l'article- {{ parent() }} {% endblock %}
+
+{% block body %}
+<br><br><br>
+	<h2>Ajouter une image</h2>
+	
+{% include "SdzBlogBundle:Blog:formimage.html.twig" %}
+
+	<p>
+		Attention : cet article sera ajouté directement
+		à l'image correspondante après validation du formulaire.
+	</p>
+	
+{% endblock %}

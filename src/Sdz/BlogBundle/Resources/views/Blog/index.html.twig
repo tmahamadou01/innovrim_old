@@ -1,0 +1,272 @@
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %} {{ parent() }}  {% endblock %}
+
+{% block sdz_blog_header%}
+<body class="index">
+	<div id="page-wrapper">
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{{ path('sdz_blog_homepage') }}"><h1 id="logo"><img src="{{ asset('images/logo_ip.png') }}" alt="" /></a></h1></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="{{ path('sdz_blog_homepage') }}">Welcome</a></li>
+							<li class="submenu">
+								<a href="#">Menu</a>
+								<ul>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_suiteip') }}">Qui sommes-nous</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_events') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_avenir') }}">A venir</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_ftic') }}">Femmes & TICs</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_actftic') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_article') }}">Activités</a></li>
+											<li><a href="{{ path('sdz_blog_fbureau') }}">Formation</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_contextsahel') }}">Sahel Fablab</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_equipe') }}">L'equipe</a></li>
+											<li><a href="#">Ateliers</a></li>
+										</ul>
+									</li>
+									<li><a href="{{ path('sdz_blog_osm') }}">OSM Mauritanie</a></li>
+									<li><a href="{{ path('sdz_blog_jerry') }}">Jerry Clan Mauritanie</a></li>
+									<li><a href="#">Sahel Droid</a></li>
+									<li><a href="{{ path('sdz_blog_contact') }}">Contact</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{{ path('fos_user_security_login') }}" class="button special">Se connecter</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+
+					<!--
+						".inner" is set up as an inline-block so it automatically expands
+						in both directions to fit whatever's inside it. This means it won't
+						automatically wrap lines, so be sure to use line breaks where
+						appropriate (<br />).
+					-->
+					<div class="inner">
+						<header>
+						<h2>INNOV<strong>RIM</strong></h2>
+						</header>
+						<p>Groupe des innovateurs en Mauritanie</p>
+						<footer>
+							<ul class="buttons vertical">
+								<li><a href="#main" class="button fit scrolly">Suite</a></li>
+							</ul>
+						</footer>
+					</div>
+
+				</section>
+	
+{% endblock %}
+
+{% block sdz_blog_body %}
+<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-bar-chart-o"></span>
+						<strong>InnovRIM</strong> est une communauté de jeunes dynamiques et engagés dans le but de promouvoir des projets innovateurs dans un esprit 
+						collaboratif sur plusieurs domaines tel que les NTICs, les énergies renouvelables et le recyclages. Sa naissance remonte en Novembre 2014 lors de la 6ième 
+						édition de Innovafrica tenu à Lomé.
+						
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style2 container special-alt">
+							<div class="row 50%">
+								<div class="8u 12u(narrower)">
+
+									<header>
+										<h2>Groupe des innovateurs en Mauritanie<strong></strong> </h2>
+									</header>
+									<p> <strong>InnovRIM</strong> engagée dans le but de promouvoir des projets innovateurs
+									sur plusieurs domaines : </p>									
+									<footer>
+										<ul class="buttons">
+											<li><a href="{{ path('sdz_blog_suiteip') }}" class="button">Plus de détails</a></li>
+										</ul>
+									</footer>
+
+								</div>
+								<div class="4u 12u(narrower) important(narrower)">
+
+									<ul class="featured-icons">
+										<li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
+										<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
+										<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
+										<li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
+										<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+										<li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
+									</ul>
+
+								</div>
+							</div>
+						</section>
+
+					<!-- Two -->
+					<!--
+						<section class="wrapper style1 container special">
+							<div class="row">
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<span class="icon featured fa-check"></span>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									</section>
+
+								</div>
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<span class="icon featured fa-check"></span>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									</section>
+
+								</div>
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<span class="icon featured fa-check"></span>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									</section>
+
+								</div>
+							</div>
+						</section>
+					-->
+					
+					<!-- Three -->
+						<section class="wrapper style3 container special">
+
+							<header class="major">
+								<h2>Nos différents axes d'<strong>innovation</strong></h2>
+							</header>
+
+							<div class="row">
+								<div class="6u 12u(narrower)">
+
+									<section>
+										<a href="#" class="image featured"><img src="{{ asset('images/pic01.jpg') }}" alt="" /></a>
+										<header>
+											<h3>SahelFablab</h3>
+										</header>
+										<p>Laboratoire de recyclage et de fabrication numérique. Les fablabs sont un réseau mondial de laboratoires locaux, 
+										qui rendent possible l'invention en ouvrant aux individus l'accès à des outils de fabrication numérique. 
+										SahelFablab est le Premier Fablab Mauritanien dans le réseau des fablabs Francophones.</p>
+									</section>
+
+								</div>
+								<div class="6u 12u(narrower)">
+
+									<section>
+										<a href="#" class="image featured"><img src="{{ asset('images/pic02.jpg') }}" alt="" /></a>
+										<header>
+											<h3>OSM Mauritanie </h3>
+										</header>
+										<p> Projet d’innovation dans la cartographie numérique OSM est un projet qui a pour but de constituer une base de données 
+										géographique libre du monde, permettant des créer des cartes sous licence libre, en utilisant le système GPS et d’autres 
+										données libres. OSM RIM a cartographié une partie de la commune de Tevragh Zeina.</p>
+									</section>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+
+									<section>
+										<a href="#" class="image featured"><img src="{{ asset('images/pic03.jpg') }}" alt="" /></a>
+										<header>
+											<h3>FEMMES & TIC</h3>
+										</header>
+										<p>Projet d’innovation des Femmes dans le domaine des TIC (Technologie de l’information et de la communication) Le groupe femmes & TIC RIM a 
+										eu comme activité.</p>
+									</section>
+
+								</div>
+								<div class="6u 12u(narrower)">
+
+									<section>
+										<a href="#" class="image featured"><img src="{{ asset('images/pic04.jpg') }}" alt="" /></a>
+										<header>
+											<h3>SAHELDROID</h3>
+										</header>
+										<p>Projet d’innovation dans le développement des applications mobile. Le projet de Mauritanie Mobile consiste à encourager les jeunes 
+										à innover dans le social.</p>
+									</section>
+
+								</div>
+							</div>
+
+							<footer class="major">
+								<ul class="buttons">
+									<li><a href="{{ path('sdz_blog_suiteip') }}" class="button">Plus de détails</a></li>
+								</ul>
+							</footer>
+
+						</section>
+
+				</article>
+
+			<!-- CTA -->
+				<section id="cta">
+
+					<header>   
+						<h2><strong>Innov </strong>RIM</h2>
+						<p>Groupe des innovateurs en Mauritanie.</p>
+					</header>
+					<footer>
+						<ul class="buttons">
+							<li><a href="{{ path('sdz_blog_contact') }}" class="button special">Contactez-Nous</a></li>
+							<li><a href="#" class="button">Local</a></li>
+						</ul>
+					</footer>
+
+				</section>
+
+
+{% endblock %}
+
+{% block sdz_blog_footer %}
+
+<!-- Footer -->
+<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://web.facebook.com/InnovRIM-1511710212447531/?ref=aymt_homepage_panel" class="icon circle fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://plus.google.com/u/0/103900754443092658839/posts" class="icon circle fa-google-plus" target="blank"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon circle fa-youtube"><span class="label" target="blank">Youtube</span></a></li>
+						<li><a href="#" class="icon circle fa-yahoo"><span class="label" target="blank">Yahoo</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						Copyright<li>&copy; 2015 InnovRIM</li><li>Designed by: <a href="{{ path('sdz_blog_homepage') }}">InnovRIM</a></li>
+					</ul>
+
+				</footer>
+
+{% endblock %}

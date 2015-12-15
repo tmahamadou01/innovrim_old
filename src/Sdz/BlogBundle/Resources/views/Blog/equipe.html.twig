@@ -1,0 +1,222 @@
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Evénements {% endblock %}
+
+
+{% block sdz_blog_header %}
+<body class="left-sidebar">
+		<div id="page-wrapper">
+	<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{{ path('sdz_blog_homepage') }}"><h1 id="logo"><img src="{{ asset('images/logo_ip.png') }}" alt="" /></a></h1></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="{{ path('sdz_blog_homepage') }}">Welcome</a></li>
+							<li class="submenu">
+								<a href="#">Menu</a>
+								<ul>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_suiteip') }}">Qui sommes-nous</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_events') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_avenir') }}">A venir</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_ftic') }}">Femmes & TICs</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_actftic') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_article') }}">Activités</a></li>
+											<li><a href="{{ path('sdz_blog_fbureau') }}">Formation</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_contextsahel') }}">Sahel Fablab</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_equipe') }}">L'equipe</a></li>
+											<li><a href="#">Ateliers</a></li>
+										</ul>
+									</li>
+									<li><a href="{{ path('sdz_blog_osm') }}">OSM Mauritanie</a></li>
+									<li><a href="{{ path('sdz_blog_jerry') }}">Jerry Clan Mauritanie</a></li>
+									<li><a href="#">Sahel Droid</a></li>
+									<li><a href="{{ path('sdz_blog_contact') }}">Contact</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{{ path('fos_user_security_login') }}" class="button special">Se connecter</a></li>
+						</ul>
+					</nav>
+				</header>
+</div>
+</div>
+
+{% endblock %}
+
+{% block sdz_blog_body %}
+<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-spinner"></span>
+						<h2><strong>INNOV</strong>RIM</h2>
+						<p>Groupe des innovateurs en Mauritanie</p>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+
+							<div class="row 150%">
+								<div class="4u 12u(narrower)">
+
+									<!-- Sidebar -->
+										<div class="sidebar">
+											<section>
+												<a href="#" class="image featured"><img src="{{ asset('images/fablab.png') }}" alt="" /></a>
+												<header>
+													<h3><strong>SahelFablab </strong></h3>
+												</header>
+												<p>Laboratoire de recyclage et de fabrication numérique. 
+												SahelFablab est le Premier Fablab Mauritanien dans le réseau des fablabs Francophones.</p>
+												<footer>
+													<ul class="buttons">
+														<li><a href="#" class="button small">Plus de détails</a></li>
+													</ul>
+												</footer>
+											</section>
+
+											
+										</div>
+
+								</div>
+								<div class="8u 12u(narrower) important(narrower)">
+									<div class="content">
+										<section>
+											<h2>Sahel<strong>Fablab</strong></h2>
+											Laboratoire de fabrication numérique	
+											<hr/>
+											<div class="bg-content">       
+											<div id="content">
+													<div class="block-slogan">
+														  <h2>L'équipe d'InnovRIM</h2>
+														</div>
+													<div class="clear"></div>
+													<ul class="thumbnails list-services">
+														  <li class="span4">
+														<div class="thumbnail-1"> <img  src="{{ asset('img/diarra.jpg') }}" alt="">
+															  <section> <a href="#" class="link-1">Diarra Sylla </a>
+															<p>Présidente InnovRIM</p>
+														  </section>
+															</div>
+													  </li>
+														  <li class="span4">
+														<div class="thumbnail-1"> <img  src="{{ asset('img/diakite.jpg') }}" alt="">
+															  <section> <a href="#" class="link-1">Aboubecrine Diakité </a>
+															<p>Facilitateur (Chargé des projet).</p>
+														  </section>
+															</div>
+													  </li>
+													  </ul>
+													  <ul class="thumbnails list-services">
+														  <li class="span4">
+														<div class="thumbnail-1"> <img  src="{{ asset('img/lam.jpg') }}" alt="">
+															  <section> <a href="#" class="link-1">Ibrahima Lam </a>
+															<p>Reférent Projet Arduino.</p>
+														  </section>
+															</div>
+													  </li>
+														  <li class="span4">
+														<div class="thumbnail-1"> <img  src="{{ asset('img/...jpg') }}" alt="">
+															  <section> <a href="#" class="link-1">.... </a>
+															<p>...</p>
+														  </section>
+															</div>
+													  </li>
+													  </ul>
+													  
+											</div>
+											</div>   
+										</section>
+									</div>
+								</div>
+								</div>
+						</section>
+
+					<!-- Two -->
+						<section class="wrapper style1 container special">
+							<div class="row">
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="4u 12u(narrower)">
+
+									<section>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+							</div>
+						</section>
+
+				</article>
+
+
+{% endblock %}
+
+
+{% block sdz_blog_footer %}
+
+<!-- Footer -->
+<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://web.facebook.com/InnovRIM-1511710212447531/?ref=aymt_homepage_panel" class="icon circle fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://plus.google.com/u/0/103900754443092658839/posts" class="icon circle fa-google-plus" target="blank"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon circle fa-youtube"><span class="label" target="blank">Youtube</span></a></li>
+						<li><a href="#" class="icon circle fa-yahoo"><span class="label" target="blank">Yahoo</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						Copyright<li>&copy; 2015 InnovRIM</li><li>Designed by: <a href="{{ path('sdz_blog_homepage') }}">InnovRIM</a></li>
+					</ul>
+
+				</footer>
+
+{% endblock %}

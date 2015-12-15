@@ -1,0 +1,129 @@
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %} {{ parent() }}  {% endblock %}
+
+
+
+{% block sdz_blog_header %}
+<body class="no-sidebar">
+		<div id="page-wrapper">
+	<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="{{ path('sdz_blog_homepage') }}"><h1 id="logo"><img src="{{ asset('images/logo_ip.png') }}" alt="" /></a></h1></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="{{ path('sdz_blog_homepage') }}">Welcome</a></li>
+							<li class="submenu">
+								<a href="#">Menu</a>
+								<ul>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_suiteip') }}">Qui sommes-nous</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_events') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_avenir') }}">A venir</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_ftic') }}">Femmes & TICs</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_actftic') }}">Evénements</a></li>
+											<li><a href="{{ path('sdz_blog_article') }}">Activités</a></li>
+											<li><a href="{{ path('sdz_blog_fbureau') }}">Formation</a></li>
+										</ul>
+									</li>
+									<li class="submenu">
+										<a href="{{ path('sdz_blog_contextsahel') }}">Sahel Fablab</a>
+										<ul>
+											<li><a href="{{ path('sdz_blog_equipe') }}">L'equipe</a></li>
+											<li><a href="#">Ateliers</a></li>
+										</ul>
+									</li>
+									<li><a href="{{ path('sdz_blog_osm') }}">OSM Mauritanie</a></li>
+									<li><a href="{{ path('sdz_blog_jerry') }}">Jerry Clan Mauritanie</a></li>
+									<li><a href="#">Sahel Droid</a></li>
+									<li><a href="{{ path('sdz_blog_contact') }}">Contact</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="{{ path('fos_user_security_login') }}" class="button special">Se connecter</a></li>
+						</ul>
+					</nav>
+				</header>
+</div>
+</div>
+{% endblock %}
+
+{% block sdz_blog_body %}
+<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-spinner"></span>
+						<h2><strong>INNOV</strong>RIM</h2>
+						<p>Groupe des innovateurs en Mauritanie</p>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										
+											{# Ici, on inclut la vue #}
+												{% include "SdzBlogBundle:Blog:publicationip.html.twig" %}
+
+											{% if listeCommentaireip|length > 0 %}
+												<div>
+													Commentaires :
+													<ul>
+														{% for commentaireip in listeCommentaireip %}
+														<i>Le {{ commentaireip.date|date('d/m/Y') }}, par {{ commentaireip.auteur }}.</i>
+														<li>{{ commentaireip.contenu }}</li>
+														{% endfor %}
+													</ul>
+												</div>
+											{% endif %}
+											{% if is_granted('ROLE_ADMIN', 'ROLE_AUTEUR') %}
+
+												<a href="{{ path('sdz_blog_homepage') }}" class="btn">
+													<i class="icon-chevron-left"></i>
+													Retour à la liste
+												</a>
+												<a href="{{ path('sdz_blog_modifierpubip', {'id': publicationip.id}) }}" class="btn">
+													<i class="icon-edit"></i>
+													Modifier la publication
+												</a>
+												<a href="{{ path('sdz_blog_supprimerpubip', {'id': publicationip.id}) }}" class="btn">
+													<i class="icon-trash"></i>
+													Supprimer la publication
+												</a>
+
+											{% endif %}
+									</section>
+								</div>
+
+						</section>
+
+				</article>
+			
+{% endblock %}
+
+{% block sdz_blog_footer %}
+<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://web.facebook.com/InnovRIM-1511710212447531/?ref=aymt_homepage_panel" class="icon circle fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://plus.google.com/u/0/103900754443092658839/posts" class="icon circle fa-google-plus" target="blank"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon circle fa-youtube"><span class="label" target="blank">Youtube</span></a></li>
+						<li><a href="#" class="icon circle fa-yahoo"><span class="label" target="blank">Yahoo</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						Copyright<li>&copy; 2015 InnovRIM</li><li>Designed by: <a href="{{ path('sdz_blog_homepage') }}">InnovRIM</a></li>
+					</ul>
+
+				</footer>
+{% endblock %}

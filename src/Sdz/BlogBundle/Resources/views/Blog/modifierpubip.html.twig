@@ -1,0 +1,21 @@
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %}Modifier une publication - {{ parent() }}{% endblock %}
+
+{% block sdz_blog_body %}
+	<h2>Modifier une publication</h2>
+
+{% include "SdzBlogBundle:Blog:formulairepubip.html.twig" %}
+	<p>
+		Vous éditez une publication déjà existant,
+		ne le changez pas trop pour éviter
+		aux membres de ne pas comprendre
+		ce qu'il se passe.
+	</p>
+	<p>
+		<a href="{{ path('sdz_blog_voirpubip', {'id': publicationip.id}) }}" class="btn">
+		<i class="icon-chevron-left"></i>
+		Retour à l'article
+		</a>
+	</p>
+{% endblock %}

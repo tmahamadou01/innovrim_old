@@ -1,0 +1,26 @@
+parameters:
+#    sdz_blog.antispam: Sdz\BlogBundle\Antispam
+
+services:
+    sdz_blog.antispam:
+        class: Sdz\BlogBundle\Antispam\SdzAntispam
+        arguments: [@mailer, %locale%, 3]
+
+services:
+    sdzblog.validator.antiflood:    # Le nom du service
+        class: Sdz\BlogBundle\Validator\AntiFloodValidator	
+        arguments: [@request, @doctrine.orm.entity_manager]	
+        scope: request	
+        tags:
+            - { name: validator.constraint_validator, alias: sdzblog_antiflood }
+
+
+
+#parameters:
+#    sdz_blog.example.class: Sdz\BlogBundle\Example
+
+#services:
+#    sdz_blog.example:
+#        class: %sdz_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+

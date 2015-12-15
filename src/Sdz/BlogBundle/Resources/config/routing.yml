@@ -1,0 +1,193 @@
+sdz_blog_homepage:
+    pattern:  /{page}
+    defaults: { _controller: SdzBlogBundle:Blog:index, page: 1 }
+    requirements: 
+        page: \d*
+
+sdz_blog_suiteip:
+    pattern:  /suiteip/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:suiteip, page: 1 }
+    requirements: 
+        page: \d*
+        
+sdz_blog_contact:
+    pattern:  /contact/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:contact, page: 1 }
+    requirements: 
+        page: \d*
+        
+sdz_blog_avenir:
+    pattern:  /avenir/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:avenir, page: 1 }
+    requirements: 
+        page: \d*
+
+sdz_blog_ftic:
+    pattern:  /ftic/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:ftic, page: 1 }
+    requirements: 
+        page: \d*
+
+sdz_blog_fbureau:
+    pattern:  /fbureautic/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:fbureau, page: 1 }
+    requirements: 
+        page: \d*
+ 
+sdz_blog_actftic:
+    pattern:  /actftic/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:actftic, page: 1 }
+    requirements: 
+        page: \d*
+
+sdz_blog_actip:
+    pattern:  /actip/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:actip, page: 1 }
+    requirements: 
+        page: \d*
+        
+sdz_blog_jerry:
+    pattern:  /jerry/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:jerry, page: 1 }
+    requirements:
+        page: \d*
+        
+sdz_blog_sante:
+    pattern:  /sante/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:sante, page: 1 }
+    requirements:
+        page: \d*
+
+sdz_blog_osm:
+    pattern:  /osm/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:osm, page: 1 }
+    requirements:
+        page: \d*
+
+sdz_blog_contextsahel:
+    pattern:  /contextsahel/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:contextsahel, page: 1 }
+    requirements:
+        page: \d*
+
+sdz_blog_equipe:
+    pattern:  /equipe/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:equipe, page: 1 }
+    requirements:
+        page: \d*
+        
+sdz_blog_mobile:
+    pattern:  /mobile/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:mobile, page: 1 }
+    requirements:
+        page: \d*
+        
+sdz_blog_article:
+    pattern:  /article/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:article, page: 1 }
+    requirements:
+        page: \d*
+  
+sdz_blog_voir:
+    pattern:  /tableau/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:voir }
+    requirements:
+        id: \d+
+        
+sdz_blog_events:
+    pattern:  /events/{page}
+    defaults: { _controller: SdzBlogBundle:Blog:events, page: 1 }
+    requirements:
+        page: \d*
+  
+sdz_blog_voirevents:
+    pattern:  /tableauevents/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:voirevents }
+    requirements:
+        id: \d+
+        
+sdz_blog_voirpub:
+    pattern:  /publication/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:voirpub }
+    requirements:
+        id: \d+
+        
+sdz_blog_voirpubip:
+    pattern:  /voirpubip/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:voirpubip }
+    requirements:
+        id: \d+
+    
+sdz_blog_voirslug:
+    pattern:  /{annee}/{slug}.{format}
+    defaults: { _controller: SdzBlogBundle:Blog:voirslug, format: html }
+    requirements:
+        annee: \d{4}
+        format: html|xml
+ 
+sdz_blog_ajouterart:
+    pattern:  /ajouterart
+    defaults: { _controller: SdzBlogBundle:Blog:ajouterart }
+    
+sdz_blog_ajouterevents:
+    pattern:  /ajouterevents
+    defaults: { _controller: SdzBlogBundle:Blog:ajouterevents }
+    
+sdz_blog_ajouterpub:
+    pattern:  /ajouterpub
+    defaults: { _controller: SdzBlogBundle:Blog:ajouterpub }
+
+sdz_blog_ajouterpubip:
+    pattern:  /ajouterpubip
+    defaults: { _controller: SdzBlogBundle:Blog:ajouterpubip }
+
+sdz_blog_modifier:
+    pattern:  /modifier/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:modifier }
+    requirements:
+        id: \d+
+        
+sdz_blog_modifierevents:
+    pattern:  /modifierevents/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:modifierevents }
+    requirements:
+        id: \d+
+
+sdz_blog_supprimer:
+    pattern:  /supprimer/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:supprimer }
+    requirements:
+        id: \d+
+        
+sdz_blog_supprimerevents:
+    pattern:  /supprimerevents/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:supprimerevents }
+    requirements:
+        id: \d+
+      
+sdz_blog_modifierpub:
+    pattern:  /modifierpub/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:modifierpub }
+    requirements:
+        id: \d+
+
+sdz_blog_modifierpubip:
+    pattern:  /modifierpubip/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:modifierpubip }
+    requirements:
+        id: \d+
+    
+sdz_blog_supprimerpub:
+    pattern:  /supprimerpub/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:supprimerpub }
+    requirements:
+        id: \d+
+        
+sdz_blog_supprimerpubip:
+    pattern:  /supprimerpubip/{id}
+    defaults: { _controller: SdzBlogBundle:Blog:supprimerpubip }
+    requirements:
+        id: \d+
+         
+         
+
