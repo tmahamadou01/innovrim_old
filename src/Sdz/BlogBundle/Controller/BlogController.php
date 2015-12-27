@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
 	public function indexAction($page)
 	{
-		totalement arbitraire !
+		
 		// On ajoute ici les variables page et nb_page à la vue
 		return $this->render('SdzBlogBundle:Blog:index.html.twig');
 	}

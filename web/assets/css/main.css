@@ -2065,7 +2065,7 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
+			background: #070A1F;
 			border-color: #83d3c9;
 			color: #fff !important;
 		}
@@ -2082,7 +2082,7 @@
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		.button.fit {
-			width: 100%;
+			width: 50%;
 		}
 
 		input[type="button"].small,
@@ -2106,7 +2106,7 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
+			background-color: #070A1F;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
@@ -2191,7 +2191,7 @@
 		left: 0;
 		padding: 1em 1.5em;
 		position: fixed;
-		top: 0;
+		top: -12px;
 		width: 100%;
 		z-index: 10000;
 	}
@@ -2337,7 +2337,7 @@
 				transition: none;
 				color: inherit;
 				text-decoration: none;
-				padding: 0 1em;
+				padding: 0 0em;
 				border: 0;
 			}
 
@@ -2485,7 +2485,7 @@
 			}
 
 	body.index #main {
-		padding-top: 5em;
+		padding-top: 2em;
 	}
 
 /* CTA */

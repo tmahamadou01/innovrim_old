@@ -11,11 +11,24 @@
 		<meta name="description" content="Groupe de innovateurs mauritaniens">
 		<meta name="keywords" content="innovrim">
 		<meta name="author" content="InnovRIM">
-		
+
 		<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
 		<link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
 		{% endblock %}
 	</head>
+
+
+					{# <a class="btn btn-primary btn-large" href="#">Accueil»</a> #}
+					{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+					Connecté en tant que <b>{{ app.user.username }} - <a href="{{ path('fos_user_security_logout') }}"><u>Déconnexion</u></a> </b><br/>
+					Action administratives :<a href="{{ path('fos_user_profile_edit') }}">Modifier mon profile</a>
+					<a href="{{ path('fos_user_profile_show') }}">Information sur mon profile</a> - <a href="{{ path('fos_user_change_password') }}">Changer mon mot de passe</a> - <a href="{{ path('sdz_blog_ajouterart') }}">Ajouter un article</a> - <a href="{{ path('sdz_blog_ajouterpub') }}">Ajouter une publication</a>
+					- <a href="{{ path('sdz_blog_ajouterpubip') }}">Ajouter une publication ip</a> - <a href="{{ path('sdz_blog_ajouterevents') }}">Ajouter un événement</a>
+					{#<a href="{{ path('fos_user_security_login') }}">Connexion</a> #}
+					{% else %}
+
+					{% endif %}
 			
 		{% block sdz_blog_main%}
 		
